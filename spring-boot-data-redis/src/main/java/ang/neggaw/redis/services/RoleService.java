@@ -12,8 +12,8 @@ import java.util.Map;
  */
 
 public interface RoleService {
-    void createRole(RoleApp role);
-    void updateRole(RoleApp role);
+    RoleApp createRole(RoleApp role);
+    RoleApp updateRole(RoleApp role);
     Map<String, RoleApp> allRoles();
     RoleApp getRoleById(String idRole);
     void deleteRoleById(String idRole);

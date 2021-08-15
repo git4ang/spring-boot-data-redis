@@ -3,6 +3,7 @@ package ang.neggaw.redis.entities;
 import lombok.*;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.annotation.Transient;
 import org.springframework.data.redis.core.RedisHash;
 
 import java.io.Serializable;
@@ -34,6 +35,9 @@ public class UserApp implements Serializable {
     private String email;
 
     private boolean enabled;
+
+    @Transient
+    private String idRole;
 
     private List<RoleApp> roles;
 }
